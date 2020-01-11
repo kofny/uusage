@@ -30,7 +30,7 @@ scp -r {username}@{ip address}:{folder in server} {your folder or file}
 杀死僵尸进程
 
 ```shell
-ps aux | grep -Z  # find zombie progress
+ps aux | grep "Z"  # find zombie progress
 kill -9 $(ps -A -ostat,ppid | grep -e '[zZ]'| awk '{ print $2 }')
 ```
 
