@@ -25,6 +25,15 @@ scp -r {username}@{ip address}:{folder in server} {your folder or file}
 
 <!-- more -->
 
+## 网络连接
+
+强制重启后可能导致没有网络连接，使用下列命令可恢复
+``` shell
+sudo service NetworkManager stop
+sudo rm /var/lib/NetworkManager/NetworkManager.state
+sudo service NetworkManager start
+```
+
 ## zombie
 
 杀死僵尸进程
